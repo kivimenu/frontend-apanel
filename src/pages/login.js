@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     height: '100vh',
   },
   image: {
-    backgroundImage: 'url(https://source.unsplash.com/random)',
+    backgroundImage: 'url(https://i.hizliresim.com/1pQ8ab.png)',
     backgroundRepeat: 'no-repeat',
     backgroundColor:
       theme.palette.type === 'dark' ? theme.palette.grey[900] : theme.palette.grey[50],
@@ -80,7 +80,7 @@ function LogIn() {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Email Adresin"
               name="email"
               autoComplete="email"
               autoFocus
@@ -91,14 +91,14 @@ function LogIn() {
               required
               fullWidth
               name="password"
-              label="Password"
+              label="Şifre"
               type="password"
               id="password"
               autoComplete="current-password"
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              label="Beni Hatırla"
             />
             <Button
               type="submit"
@@ -107,17 +107,17 @@ function LogIn() {
               color="primary"
               className={classes.submit}
             >
-              Sign In
+              Giriş yap
             </Button>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
-                  Forgot password?
+                  Şifreni mi unuttun?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                <Link href="signup" variant="body2">
+                  {"Hesabın yok mu? Kayıt olmak için tıklayın"}
                 </Link>
               </Grid>
             </Grid>
