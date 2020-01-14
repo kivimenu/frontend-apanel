@@ -41,12 +41,12 @@ const Sidebar = props => {
 
   const pages = [
     {
-      title: 'Dashboard',
+      title: 'Anasayfa',
       href: '/dashboard',
       icon: <DashboardIcon />
     },
     {
-      title: 'Products',
+      title: 'Ürünler',
       href: '/products',
       icon: <ShoppingBasketIcon />
     },
@@ -56,12 +56,12 @@ const Sidebar = props => {
       icon: <LockOpenIcon />
     },
     {
-      title: 'Account',
+      title: 'Hesabım',
       href: '/account',
       icon: <AccountBoxIcon />
     },
     {
-      title: 'Settings',
+      title: 'Ayarlar',
       href: '/settings',
       icon: <SettingsIcon />
     }
