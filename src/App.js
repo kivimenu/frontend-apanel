@@ -1,27 +1,36 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
-//components
-// import Navbar from './components/Navbar';
+import React, { Component } from 'react';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import { Chart } from 'react-chartjs-2';
+import { ThemeProvider } from '@material-ui/styles';
+import validate from 'validate.js';
 
-//pages
-import home from './pages/home';
-import LogIn from './pages/LogIn';
-import SignUp from './pages/SignUp';
+import { chartjs } from './helpers';
+import theme from './theme';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+import './assets/scss/index.scss';
+import validators from './common/validators';
+import Routes from './Routes';
 
-function App() {
-  return (
-    <div className="App">
-      <Router>
-        {/* <Navbar /> */}
-          <Switch>
-            <Route exact path="/" component={home} />
-            <Route exact path="/login" component={LogIn} />
-            <Route exact path="/signup" component={SignUp} />
-          </Switch>
-      </Router>
-    </div>
-  );
+const browserHistory = createBrowserHistory();
+
+Chart.helpers.extend(Chart.elements.Rectangle.prototype, {
+  draw: chartjs.draw
+});
+
+validate.validators = {
+  ...validate.validators,
+  ...validators
+};
+
+export default class App extends Component {
+  render() {
+    return (
+      <ThemeProvider theme={theme}>
+        <Router history={browserHistory}>
+          <Routes />
+        </Router>
+      </ThemeProvider>
+    );
+  }
 }
-
-export default App;
