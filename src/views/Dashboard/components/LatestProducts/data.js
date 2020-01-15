@@ -4,7 +4,7 @@ import moment from 'moment';
 export default [
   {
     id: uuid(),
-    name: 'Dropbox',
+    name: 'Çorba',
     imageUrl: '/images/products/product_1.png',
     updatedAt: moment().subtract(2, 'hours')
   },
