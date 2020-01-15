@@ -86,7 +86,7 @@ const ProductCard = props => {
               display="inline"
               variant="body2"
             >
-              Updated 2hr ago
+              2 saat önce Güncellendi
             </Typography>
           </Grid>
           <Grid

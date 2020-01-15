@@ -134,7 +134,7 @@ const LatestOrders = props => {
           size="small"
           variant="text"
         >
-          View all <ArrowRightIcon />
+          Tümünü Göster <ArrowRightIcon />
         </Button>
       </CardActions>
     </Card>
