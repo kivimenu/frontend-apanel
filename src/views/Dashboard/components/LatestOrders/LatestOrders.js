@@ -45,9 +45,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const statusColors = {
-  delivered: 'success',
-  pending: 'info',
-  refunded: 'danger'
+  giden: 'success',
+  gelen: 'info',
+  onaylanan: 'warning'
 };
 
 const LatestOrders = props => {

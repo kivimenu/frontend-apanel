@@ -11,7 +11,8 @@ import {
   Divider
 } from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
-import GetAppIcon from '@material-ui/icons/GetApp';
+import StoreMallDirectoryIcon from '@material-ui/icons/StoreMallDirectory';
+
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -93,12 +94,12 @@ const ProductCard = props => {
             className={classes.statsItem}
             item
           >
-            <GetAppIcon className={classes.statsIcon} />
+            <StoreMallDirectoryIcon className={classes.statsIcon} />
             <Typography
               display="inline"
               variant="body2"
             >
-              {product.totalDownloads} Downloads
+              {product.satildi} adet Satıldı
             </Typography>
           </Grid>
         </Grid>
