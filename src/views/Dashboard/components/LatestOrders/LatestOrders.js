@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import moment from 'moment';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import PropTypes from 'prop-types';
+import RefreshIcon from '@material-ui/icons/Refresh';
 import { makeStyles } from '@material-ui/styles';
 import {
   Card,
@@ -69,7 +70,7 @@ const LatestOrders = props => {
             size="small"
             variant="outlined"
           >
-            New entry
+            <RefreshIcon />
           </Button>
         }
         title="Son Siparişler"

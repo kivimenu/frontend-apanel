@@ -38,12 +38,6 @@ const useStyles = makeStyles(theme => ({
     marginLeft: '3%',
     position: 'relative'
   },
-  importButton: {
-    marginRight: theme.spacing(1)
-  },
-  exportButton: {
-    marginRight: theme.spacing(1)
-  },
   searchInput: {
     marginRight: theme.spacing(1)
   },
@@ -86,8 +80,6 @@ const ProductsToolbar = props => {
     >
       <div className={classes.row}>
         <span className={classes.spacer} />
-        <Button className={classes.importButton}>Import</Button>
-        <Button className={classes.exportButton}>Export</Button>
         <Button
           color="primary"
           variant="contained"
@@ -115,6 +107,8 @@ const ProductsToolbar = props => {
               type="urunadi"
               fullWidth
             />
+            <br />
+            <br />
             <TextField
               autoFocus
               margin="dense"
@@ -126,12 +120,14 @@ const ProductsToolbar = props => {
               type="number"
               fullWidth
             />
+            <br />
+            <br />
             <TextField
-              autoFocus
-              margin="dense"
-              id="urunaciklama"
+              id="outlined-multiline-static"
               label="Ürün Açıklaması"
-              type="urunaciklama"
+              multiline
+              rows="4"
+              variant="outlined"
               fullWidth
             />
           </DialogContent>
